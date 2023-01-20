@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Decodificador Alura</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+
+  <body>
+    <div class="logo-alura">
+      <header>
+        <img src="/imagens/logo.png" alt="Logo" />
+      </header>
+
+      <main>
+        <section>
+          <!--Texto a ser criptografado-->
+          <textarea
+            class="caixa-criptografa"
+            id="digita-texto"
+            cols="30"
+            rows="10"
+            placeholder="Digite seu texto"
+          ></textarea>
+
+          <div class="alerta">
+            <img src="/imagens/alerta.png" alt="alerta exclamação">
+            <p class=""> Apenas letras minúsculas e sem acento.</p>
+        </div>
+
+          <div>
+            <button onclick="criptografar()" class="btn-criptografar">
+              Criptografar
+            </button>
+            <button onclick="descriptografar()" class="btn-descriptografar">
+              Descriptografar
+            </button>
+          </div>
+        </section>
+
+        <section>
+          <!--Texto criptofradado-->
+          <textarea
+            disabled
+            class="caixa-descriptografa"
+            id="saida-texto"
+            cols="20"
+            rows="10"
+          ></textarea>
+
+          <div id="mostra-conteudo">
+            <img
+              class="boneco"
+              src="/imagens/boneco.png"
+              alt="boneco lupa na mão"
+            />
+
+            <div class="mensagem">
+              <p>Nenhuma mensagem encontrada</p>
+              <p class="p2">
+                Digite um texto que você deseja criptografar ou descriptografar.
+              </p>
+            </div>
+          </div>
+
+          <div id="oculta-conteudo">
+            <button
+              onclick="CopiaCriptografia()"
+              class="btn-copiar"
+              id="copiar"
+            >
+              Copiar
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="rodape">
+            <br>
+          <p>Desenvolvido por <a href="https://github.com/bruno-gac">Bruno Gaspar</a></p>
+          
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
